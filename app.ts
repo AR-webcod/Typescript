@@ -19,7 +19,6 @@ function result(carObj: car) {
   console.log(carObj.name);
   console.log(carObj.model);
   console.log(carObj.color);
-  
 }
 
 result(carObj);
@@ -44,3 +43,17 @@ argu({
   password: 1234,
   superadmin: true,
 });
+
+interface ProductCardProps {
+  name: string;
+  price: number;
+  inStock: boolean;
+}
+
+function ProductCard({ name, price, inStock }: ProductCardProps) {
+  return `<div>
+      <h2>{name}</h2>
+      <p>Rs.{price}</p>
+      <p>{inStock ? "In Stock" : "Out of Stock"}</p>
+    </div>`;
+}

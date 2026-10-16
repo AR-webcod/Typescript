@@ -25,3 +25,5 @@ argu({
     password: 1234,
     superadmin: true,
 });
+
+

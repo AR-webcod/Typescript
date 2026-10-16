@@ -1,3 +1,17 @@
+TypeScript is an open-source programming language developed by Microsoft that acts as a strict superset of JavaScript. Essentially, it is "JavaScript with syntax for types," meaning that any valid JavaScript code is also valid TypeScript code.
+Because web browsers and execution environments like Node.js cannot run TypeScript directly, a compiler transpiles TypeScript code into plain JavaScript by stripping out the type syntax before production.
+
+# TypeScript kisne banayi aur kab?
+
+Anders Hejlsberg
+Creator of TypeScript
+TypeScript ko Microsoft ki team ne develop kiya, jismein Anders Hejlsberg ka central role tha. Hejlsberg C# language ke design ke liye bhi mashhoor hain.
+
+# TypeScript banane ki zaroorat kyun pesh aayi?
+
+Shuru mein JavaScript ka use mostly web pages mein chhoti-moti interactivity ke liye hota tha. Lekin waqt ke saath websites badi applications ban gayin — jinmein hazaron functions, components, developers aur files hoti hain.
+Microsoft ne dekha ke bade JavaScript projects ko maintain karna mushkil ho raha tha. Developers ko aise tools ki zaroorat thi jo code likhte waqt hi mistakes identify kar saken aur autocomplete, navigation aur refactoring mein madad dein. Isi zaroorat ke liye TypeScript develop ki gayi.
+
 # TypeScript Setup
 
 1. Node.js install karein.
@@ -79,16 +93,27 @@ Other types:
 - null
 - undefined
 - never
+- union
+
+# Union types
+
+Kabhi variable ko ek se zyada types ki permission deni hoti hai.
+example:
+
+let userId: number | string;
+
+userId = 101;
+userId = "USER101"; 
 
 2. interface kya hota hai?
-   TypeScript mein interface ek structure ya blueprint banata hai. Ye define karta hai ke kisi object mein kaun si properties honi chahiye aur unka data type kya hoga.
+TypeScript mein interface ek structure ya blueprint banata hai. Ye define karta hai ke kisi object mein kaun si properties honi chahiye aur unka data type kya hoga.
 
-   Example:
+Example:
 
-   interface User {
-   email: string;
-   password: number;
-   }
+interface User {
+email: string;
+password: number;
+}
 
 Ab isko line by line samjho:
 
@@ -139,16 +164,20 @@ Yani Admin ke paas ab 3 properties hain:
    };
 
 4. interface aur extends mein kya farq hai?
-   interface extends
+
+   # interface extends
+
    Blueprint define karta hai. Existing blueprint se properties inherit karta hai.
    Naya structure banane ke liye use hota hai. Existing structure ko reuse aur expand karta hai.
-   Example: interface User {} Example: interface Admin extends User {}
-   Ek important baat: extends akela interface nahi hai. Ye inheritance dikhane wala keyword hai jo interface declaration mein use hua hai. 5. function argu(obj: Admin) ka kya matlab hai?
-   function argu(obj: Admin) {
-   obj.email;
-   obj.password;
-   obj.superadmin;
-   }
+   - Example: interface User {}
+   - Example: interface Admin extends User {}
+     Ek important baat: extends akela interface nahi hai. Ye inheritance dikhane wala keyword hai jo interface declaration mein use hua hai.
+   5. function argu(obj: Admin) ka kya matlab hai?
+      function argu(obj: Admin) {
+      obj.email;
+      obj.password;
+      obj.superadmin;
+      }
 
 Isko parts mein samjho:
 
@@ -166,13 +195,12 @@ Isko parts mein samjho:
   console.log(obj.email);
   console.log(obj.password);
   console.log(obj.superadmin);
-  }
-  6. Function ko call kaise kiya ja raha hai?
-     argu({
-     email: "abdulrehmanar1996@gmail.com",
-     password: 1234,
-     superadmin: true
-     });
+  } 6. Function ko call kaise kiya ja raha hai?
+  argu({
+  email: "abdulrehmanar1996@gmail.com",
+  password: 1234,
+  superadmin: true
+  });
 
 Yahan hum argu() function ko call kar rahe hain aur ek object pass kar rahe hain.
 TypeScript check karega ke object mein Admin ki required properties maujood hain ya nahi.
