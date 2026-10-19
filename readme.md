@@ -51,7 +51,7 @@ Microsoft ne dekha ke bade JavaScript projects ko maintain karna mushkil ho raha
    ```bash
    npm -v
    ```
-4. Locally in your project:bash
+4. Locally in your project
    ```bash
    npm install -D typescript@latest
    ```
