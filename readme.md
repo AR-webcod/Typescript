@@ -1,11 +1,38 @@
+# what is typescript?
+
 TypeScript is an open-source programming language developed by Microsoft that acts as a strict superset of JavaScript. Essentially, it is "JavaScript with syntax for types," meaning that any valid JavaScript code is also valid TypeScript code.
 Because web browsers and execution environments like Node.js cannot run TypeScript directly, a compiler transpiles TypeScript code into plain JavaScript by stripping out the type syntax before production.
 
 # TypeScript kisne banayi aur kab?
 
-Anders Hejlsberg
-Creator of TypeScript
-TypeScript ko Microsoft ki team ne develop kiya, jismein Anders Hejlsberg ka central role tha. Hejlsberg C# language ke design ke liye bhi mashhoor hain.
+- Family ECMAScript
+- Paradigm Multi-paradigm: functional, generic, imperative, object-oriented
+- Designed by Microsoft,
+- Anders Hejlsberg,
+- Luke Hoban
+- Developer Microsoft
+- First appeared 1 October 2012; 14 years ago[1]
+- Stable release
+- 7.0.2[2] Edit this on Wikidata / 8 July 2026; 3 months ago[3]
+- Typing discipline Duck, gradual, strong, structural[4]
+- Scope Lexical
+- License Apache 2.0
+- Filename extensions .ts, .tsx, .mts, .cts
+- Website www.typescriptlang.org
+
+* Anders Hejlsberg
+  Creator of TypeScript
+  TypeScript ko Microsoft ki team ne develop kiya, jismein Anders Hejlsberg ka central role tha. Hejlsberg C# language ke design ke liye bhi mashhoor hain.
+
+# Key Features & How It Works
+
+- Static Typing: Unlike JavaScript (which determines data types at runtime), TypeScript forces you to explicitly declare what kind of data your variables, arguments, and object properties should hold (e.g., strings, numbers, booleans).
+
+- Compile-Time Checking: TypeScript catches bugs—like passing text into a math function or trying to access a property that doesn't exist—as you type or build your application. JavaScript only surfaces these issues when a user encounters them at runtime.
+
+- No Runtime Overhead: TypeScript is strictly a development-time tool. Once compiled into standard JavaScript, all the type annotations are completely stripped out, meaning it has zero effect on application performance.
+
+- Enhanced Developer Tooling: By giving the code structure, text editors can offer intelligent autocomplete, safer code refactoring across massive codebases, and instant inline documentation.
 
 # TypeScript banane ki zaroorat kyun pesh aayi?
 
@@ -103,10 +130,10 @@ example:
 let userId: number | string;
 
 userId = 101;
-userId = "USER101"; 
+userId = "USER101";
 
 2. interface kya hota hai?
-TypeScript mein interface ek structure ya blueprint banata hai. Ye define karta hai ke kisi object mein kaun si properties honi chahiye aur unka data type kya hoga.
+   TypeScript mein interface ek structure ya blueprint banata hai. Ye define karta hai ke kisi object mein kaun si properties honi chahiye aur unka data type kya hoga.
 
 Example:
 
