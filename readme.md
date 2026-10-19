@@ -42,6 +42,7 @@ Microsoft ne dekha ke bade JavaScript projects ko maintain karna mushkil ho raha
 # TypeScript Setup
 
 1. Node.js install karein.
+
 2. Node.js version check karne ke liye:
    ```bash
    node -v
@@ -50,20 +51,24 @@ Microsoft ne dekha ke bade JavaScript projects ko maintain karna mushkil ho raha
    ```bash
    npm -v
    ```
-4. TypeScript globally install karne ke liye:
+4. Locally in your project:bash
+   ```bash
+   npm install -D typescript@latest
+   ```
+5. TypeScript globally install karne ke liye:
    ```bash
    npm install -g typescript
    ```
-5. TypeScript version check karne ke liye:
+6. TypeScript version check karne ke liye:
    ```bash
    tsc -v
    ```
-6. TypeScript compiler TypeScript file ko JavaScript file mein convert karta hai.
+7. TypeScript compiler TypeScript file ko JavaScript file mein convert karta hai.
    Example:
    ```bash
    tsc app.ts
    ```
-7. tsconfig.json file generate karne ke liye:
+8. tsconfig.json file generate karne ke liye:
    ```bash
    tsc --init
    ```
